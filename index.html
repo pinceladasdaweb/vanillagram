@@ -1,124 +1,206 @@
-<!doctype html>
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Vanillagram by pinceladasdaweb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VanillaGram - VanillaJS script to apply filters for images similar to Instagram</title>
+    <link href="http://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet" type="text/css">
+    <link href="stylesheets/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+    <script>
+        if ('attachEvent' in document.documentElement) {
+            document.createElement('header');
+            document.createElement('section');
+            document.createElement('footer');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="imgs/header.jpg">
+        <div class="titles">
+            <h1>VanillaGram</h1>
+            <h2>VanillaJS script to apply filters for images similar to Instagram</h2>
+        </div>
+    </header>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Vanillagram</h1>
-        <p>VanillaJS script to apply filters for images similar to Instagram</p>
+    <section class="vanillagram-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="vanillagram-content">
+                        <h3>What is it?</h3>
+                        <p><a href="https://github.com/pinceladasdaweb/vanillagram" title="VanillaGram">VanillaGram</a> is an easy-to-use Vanilla JS plugin, based on the original <a href="http://www.vivienilett.com/simplefilter/" title="simpleFilter.js">simpleFilter.js</a>, created by <a href="http://www.vivienilett.com" title="Vivien Ilett">Vivien Ilett</a>, with a library of photo filters for your website. Choose from eight filters and six modifiers to create subtle effects. See below for examples or go straight to the <a href="#howto" title="Instructions">instructions</a>.</p>
+                        <h3>Here are some examples of the effects you can achieve with VanillaGram</h3>
+                        <div class="row photos-wrap">
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="photo-box">
+                                    <div class="image-wrap"><img class="vanillagram filter1" src="imgs/test-image.jpg"></div>
+                                    <div class="description">
+                                        <h4>fade</h4>
+                                        <p>Slight fade for a dreamy effect</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="photo-box">
+                                    <div class="image-wrap"><img class="vanillagram filter2" src="imgs/test-image2.jpg"></div>
+                                    <div class="description">
+                                        <h4>vintage</h4>
+                                        <p>Cool tones and high contrast</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="photo-box">
+                                    <div class="image-wrap"><img class="vanillagram filter3" src="imgs/test-image3.jpg"></div>
+                                    <div class="description">
+                                        <h4>greyscale</h4>
+                                        <p>No colour, medium contrast</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="photo-box">
+                                    <div class="image-wrap"><img class="vanillagram filter4" src="imgs/test-image4.jpg"></div>
+                                    <div class="description">
+                                        <h4>luxen + lightleak</h4>
+                                        <p>Bright and energetic</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="photo-box">
+                                    <div class="image-wrap"><img class="vanillagram filter5" src="imgs/test-image5.jpg"></div>
+                                    <div class="description">
+                                        <h4>subtle</h4>
+                                        <p>Light and airy</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="photo-box">
+                                    <div class="image-wrap"><img class="vanillagram filter6" src="imgs/test-image6.jpg"></div>
+                                    <div class="description">
+                                        <h4>olive</h4>
+                                        <p>Deeper contrast, warm tones</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="photo-box">
+                                    <div class="image-wrap"><img class="vanillagram filter7" src="imgs/test-image7.jpg"></div>
+                                    <div class="description">
+                                        <h4>beach</h4>
+                                        <p>Cool tones and low blacks</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="photo-box">
+                                    <div class="image-wrap"><img class="vanillagram filter8" src="imgs/test-image8.jpg"></div>
+                                    <div class="description">
+                                        <h4>oldtimey + shadow</h4>
+                                        <p>Moody and lovely</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Other options</h3>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="photo-box">
+                                    <div class="image-wrap"><img class="vanillagram filter9" src="imgs/test-image.jpg"></div>
+                                    <div class="description">
+                                        <h4>lightleak1</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="photo-box">
+                                    <div class="image-wrap"><img class="vanillagram filter10" src="imgs/test-image2.jpg"></div>
+                                    <div class="description">
+                                        <h4>lightleak2</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="photo-box">
+                                    <div class="image-wrap"><img class="vanillagram filter11" src="imgs/test-image3.jpg"></div>
+                                    <div class="description">
+                                        <h4>vignette shadow</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="photo-box">
+                                    <div class="image-wrap"><img class="vanillagram filter12" src="imgs/test-image4.jpg"></div>
+                                    <div class="description">
+                                        <h4>lightleak3</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 id="howto">How to use it</h3>
+                        <p>Start by downloading the vanillagram.js file and link it in your HTML document.</p>
+                        <div class="code">
+                            <code>&lt;script src="path/to/vanillagram.js">&lt;/script></code>
+                        </div>
+                        <p>If you'd only like to target some of your images, add classes to the images you'd like to target. Please note that images can only be targeted locally. Perhaps like this:</p>
+                        <div class="code">
+                            <code>&lt;img src="path/to/image.jpg" class="filter1"></code>
+                        </div>
+                        <p>Target your image and add your chosen filter and/or lightleak/shadow option. The plugin detects if the image was fully loaded and only then apply the filters.</p>
+                        <div class="code">
+                            <code>
+VanillaGram('.filter1', {
+    filter: 'fade',
+    lightleak: 'lightleak1',
+    shadow: 'drama'
+});
+                            </code>
+                        </div>
+                        <p>Ta-da! Your images should be fresh and fancy now. Colours manipulate differently on different images, so play around with different options to find a filter that suits the images best. Shadows and light leaks should be used sparingly.<br><br>Note: if you are testing this from your computer, this won't work. You will need to run testing on a local server :)</p>
+                        <h3 id="#options">Full list of image options</h3>
+                        <p class="subtitle">Filters</p>
+                        <ul class="options">
+                            <li>fade</li>
+                            <li>|</li>
+                            <li>vintage</li>
+                            <li>|</li>
+                            <li>greyscale</li>
+                            <li>|</li>
+                            <li>luxen</li>
+                            <li>|</li>
+                            <li>subtle</li>
+                            <li>|</li>
+                            <li>olive</li>
+                            <li>|</li>
+                            <li>beach</li>
+                            <li>|</li>
+                            <li>oldtimey</li>
+                        </ul>
+                        <p class="subtitle">Light Leaks</p>
+                        <ul class="options">
+                            <li>lightleak1</li>
+                            <li>|</li>
+                            <li>lightleak2</li>
+                            <li>|</li>
+                            <li>lightleak3</li>
+                        </ul>
+                        <p class="subtitle">Shadows</p>
+                        <ul class="options">
+                            <li>vignette</li>
+                            <li>|</li>
+                            <li>drama</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <p class="view"><a href="https://github.com/pinceladasdaweb/vanillagram">View the Project on GitHub <small>pinceladasdaweb/vanillagram</small></a></p>
+    <section class="footer-bottom">2016 &copy; Pedro Rogério. All rights reserved.</section>
 
-
-        <ul>
-          <li><a href="https://github.com/pinceladasdaweb/vanillagram/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/pinceladasdaweb/vanillagram/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/pinceladasdaweb/vanillagram">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>
-<a id="vanillagram" class="anchor" href="#vanillagram" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>VanillaGram</h1>
-
-<blockquote>
-<p>VanillaJS script to apply filters for images similar to Instagram</p>
-</blockquote>
-
-<p><img src="https://raw.github.com/pinceladasdaweb/vanillagram/master/screenshot.png" alt=""></p>
-
-<h2>
-<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Demo</h2>
-
-<p>View <a href="https://pinceladasdaweb.github.io/vanillagram/">demo here</a></p>
-
-<h2>
-<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h2>
-
-<p>You can get it on npm.</p>
-
-<div class="highlight highlight-source-shell"><pre>npm install vanillagram --save</pre></div>
-
-<h2>
-<a id="download" class="anchor" href="#download" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Download</h2>
-
-<p>If you're not into package management, just <a href="https://github.com/pinceladasdaweb/vanillagram/archive/master.zip">download a ZIP</a> file.</p>
-
-<h2>
-<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use?</h2>
-
-<p>First, include the script located on the <code>dist</code> folder.</p>
-
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>dist/vanillagram.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
-
-<p>Now, you need to instantiate it by passing a DOM selector and <a href="https://pinceladasdaweb.github.io/vanillagram/#options">options</a>.</p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-en">VanillaGram</span>(<span class="pl-s"><span class="pl-pds">'</span>.filter1<span class="pl-pds">'</span></span>, {
-    filter<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>fade<span class="pl-pds">'</span></span>,
-    lightleak<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>lightleak1<span class="pl-pds">'</span></span>,
-    shadow<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>drama<span class="pl-pds">'</span></span>
-});</pre></div>
-
-<h2>
-<a id="browser-support" class="anchor" href="#browser-support" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Browser Support</h2>
-
-<table>
-<thead>
-<tr>
-<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png" alt="IE"></th>
-<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" alt="Chrome"></th>
-<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_48x48.png" alt="Firefox"></th>
-<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/opera/opera_48x48.png" alt="Opera"></th>
-<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/safari/safari_48x48.png" alt="Safari"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>IE 9+ ✔</td>
-<td>Latest ✔</td>
-<td>Latest ✔</td>
-<td>Latest ✔</td>
-<td>Latest ✔</td>
-</tr>
-</tbody>
-</table>
-
-<h2>
-<a id="thanks" class="anchor" href="#thanks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Thanks</h2>
-
-<p>Many thanks to <a href="http://www.vivienilett.com/simplefilter/">Vivien Ilett</a>, who originally created the plugin for jQuery.</p>
-
-<h2>
-<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
-
-<p>Check <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> for more information.</p>
-
-<h2>
-<a id="history" class="anchor" href="#history" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>History</h2>
-
-<p>Check <a href="https://github.com/pinceladasdaweb/vanillagram/releases">Releases</a> for detailed changelog.</p>
-
-<h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
-
-<p><a href="LICENSE">MIT</a></p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/pinceladasdaweb">pinceladasdaweb</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+    <script type="text/javascript" src="dist/vanillagram.min.js"></script>
+    <script type="text/javascript" src="javascripts/filters.js"></script>
+</body>
 </html>
