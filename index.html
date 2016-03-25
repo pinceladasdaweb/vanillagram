@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Vanillagram by pinceladasdaweb</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Vanillagram</h1>
+        <p>VanillaJS script to apply filters for images similar to Instagram</p>
+
+        <p class="view"><a href="https://github.com/pinceladasdaweb/vanillagram">View the Project on GitHub <small>pinceladasdaweb/vanillagram</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/pinceladasdaweb/vanillagram/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/pinceladasdaweb/vanillagram/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/pinceladasdaweb/vanillagram">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="vanillagram" class="anchor" href="#vanillagram" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>VanillaGram</h1>
+
+<blockquote>
+<p>VanillaJS script to apply filters for images similar to Instagram</p>
+</blockquote>
+
+<p><img src="https://raw.github.com/pinceladasdaweb/vanillagram/master/screenshot.png" alt=""></p>
+
+<h2>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Demo</h2>
+
+<p>View <a href="https://pinceladasdaweb.github.io/vanillagram/">demo here</a></p>
+
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h2>
+
+<p>You can get it on npm.</p>
+
+<div class="highlight highlight-source-shell"><pre>npm install vanillagram --save</pre></div>
+
+<h2>
+<a id="download" class="anchor" href="#download" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Download</h2>
+
+<p>If you're not into package management, just <a href="https://github.com/pinceladasdaweb/vanillagram/archive/master.zip">download a ZIP</a> file.</p>
+
+<h2>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use?</h2>
+
+<p>First, include the script located on the <code>dist</code> folder.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>dist/vanillagram.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>Now, you need to instantiate it by passing a DOM selector and <a href="https://pinceladasdaweb.github.io/vanillagram/#options">options</a>.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">VanillaGram</span>(<span class="pl-s"><span class="pl-pds">'</span>.filter1<span class="pl-pds">'</span></span>, {
+    filter<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>fade<span class="pl-pds">'</span></span>,
+    lightleak<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>lightleak1<span class="pl-pds">'</span></span>,
+    shadow<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>drama<span class="pl-pds">'</span></span>
+});</pre></div>
+
+<h2>
+<a id="browser-support" class="anchor" href="#browser-support" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Browser Support</h2>
+
+<table>
+<thead>
+<tr>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png" alt="IE"></th>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" alt="Chrome"></th>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_48x48.png" alt="Firefox"></th>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/opera/opera_48x48.png" alt="Opera"></th>
+<th><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/safari/safari_48x48.png" alt="Safari"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IE 9+ ✔</td>
+<td>Latest ✔</td>
+<td>Latest ✔</td>
+<td>Latest ✔</td>
+<td>Latest ✔</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="thanks" class="anchor" href="#thanks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Thanks</h2>
+
+<p>Many thanks to <a href="http://www.vivienilett.com/simplefilter/">Vivien Ilett</a>, who originally created the plugin for jQuery.</p>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>Check <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> for more information.</p>
+
+<h2>
+<a id="history" class="anchor" href="#history" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>History</h2>
+
+<p>Check <a href="https://github.com/pinceladasdaweb/vanillagram/releases">Releases</a> for detailed changelog.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="LICENSE">MIT</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/pinceladasdaweb">pinceladasdaweb</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
