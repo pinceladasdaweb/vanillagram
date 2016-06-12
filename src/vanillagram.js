@@ -69,7 +69,7 @@
             return;
         }
 
-        this.element = element.constructor.name === "NodeList" ? element : document.querySelectorAll(element);
+        this.element = element instanceof NodeList ? element : document.querySelectorAll(element);
         this.options = options;
 
         this.ready();

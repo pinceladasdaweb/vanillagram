@@ -1,4 +1,4 @@
-/*! vanillagram v0.0.1 | (c) 2016 Pedro Rogério | https://github.com/pinceladasdaweb/vanillagram */
+/*! vanillagram v0.0.2 | (c) 2016 Pedro Rogério | https://github.com/pinceladasdaweb/vanillagram */
 (function (root, factory) {
     "use strict";
     if (typeof define === 'function' && define.amd) {
@@ -70,7 +70,7 @@
             return;
         }
 
-        this.element = element.constructor.name === "NodeList" ? element : document.querySelectorAll(element);
+        this.element = element instanceof NodeList ? element : document.querySelectorAll(element);
         this.options = options;
 
         this.ready();
